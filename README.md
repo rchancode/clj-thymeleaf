@@ -1,8 +1,8 @@
 # clj-thymeleaf
 
-A Clojure wrapper for Thymeleaf templating engine. For more details, see http://www.thymeleaf.org/. 
+A Clojure wrapper for Thymeleaf templating engine (http://www.thymeleaf.org/). 
 
-Currently uses Thymeleaf version 3.0.0.BETA01.
+This currently uses Thymeleaf version 3.0.0.BETA01.
 
 ## Installation
 
