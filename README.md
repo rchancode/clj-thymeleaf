@@ -2,7 +2,7 @@
 
 A Clojure wrapper for Thymeleaf templating engine (http://www.thymeleaf.org/). 
 
-This currently uses Thymeleaf version 3.0.0.BETA01.
+This currently uses Thymeleaf version 3.0.0.BETA02.
 
 ## Installation
 
