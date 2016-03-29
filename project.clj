@@ -3,7 +3,7 @@
   :url "https://github.com/rchancode/clj-thymeleaf"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
-  :dependencies [[org.clojure/clojure "1.7.0"]
+  :dependencies [[org.clojure/clojure "1.8.0"]
                  [org.thymeleaf/thymeleaf "3.0.0.BETA02"]]
   :global-vars {*warn-on-reflection* true}
   )
