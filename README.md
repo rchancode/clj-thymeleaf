@@ -41,7 +41,7 @@ Or in the `ns` declaration:
   (render-file engine "test" {:title "Hello"}))
 ```
 
-`render-file` will return output as a string.
+`render-file` will return string.
 
 Optionally, you can also pass a `java.io.Writer` as the last argument to `render-file` function.
 
@@ -52,4 +52,4 @@ Copyright © 2016 rchancode
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
 
-THYMLEAF is a Copyright © of The THYMELEAF Team (http://www.thymeleaf.org/license.html)
+THYMELEAF is a Copyright © of The THYMELEAF Team (http://www.thymeleaf.org/license.html)
