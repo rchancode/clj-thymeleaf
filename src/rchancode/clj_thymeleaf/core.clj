@@ -15,13 +15,12 @@
 
 
 (defn ^TemplateEngine template-engine
-  "
-  Instantiates a Thymeleaf TemplateEngine.
-  Paramenters:
+  " Instantiates a Thymeleaf TemplateEngine with the following options:
+
   :template-resolver-type - either :file, :url or :classpath, defaults to :classpath.
   :prefix                 - template file name prefix e.g ./test/templates/
   :suffix                 - Template file name suffix e.g .html
-  :cacheable              - whether to cache templates for better performance, defaults to true.
+  :cacheable              - whether to cache templates for better performance, defaults to false.
   "
   [& {:keys [prefix suffix cacheable template-resolver-type]
       :or {prefix nil
@@ -41,7 +40,14 @@
 
 
 (defn render-file
-  "Takes a context-map and renders a template as a String or to a java.io.Writer. Returns nil when output to a java.io.Writer."
+  "Renders a template into a String or have the output directed to a java.io.Writer.
+   Returns nil when the output is directed to a java.io.Writer.
+
+   Parameters:
+   engine - an instance of Thymeleaf template engine.
+   template - the path to the template.
+   context-map - the map of values for the template to render.
+   "
   ([^TemplateEngine engine ^String template context-map]
    (render-file engine template context-map nil))
   ([^TemplateEngine engine ^String template context-map ^java.io.Writer writer]
@@ -52,7 +58,4 @@
            (.setVariable ctx (first kv) (second kv))))
        (if writer
          (.process engine template ctx writer)
-         (.process engine template ctx))
-       ))))
-
-
+         (.process engine template ctx))))))
