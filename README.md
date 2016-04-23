@@ -2,7 +2,7 @@
 
 A Clojure wrapper for Thymeleaf templating engine (http://www.thymeleaf.org/). 
 
-This currently uses Thymeleaf version 3.0.0.BETA02.
+This project currently uses Thymeleaf version 3.0.0.BETA03.
 
 ## Installation
 
@@ -41,9 +41,8 @@ Or in the `ns` declaration:
   (render-file engine "test" {:title "Hello"}))
 ```
 
-`render-file` will return string.
-
-Optionally, you can also pass a `java.io.Writer` as the last argument to `render-file` function.
+By default, the `render-file` function produces a string. You can also redirect the output to a `java.io.Writer` by passing it
+as the last argument to the function.
 
 ## License
 
