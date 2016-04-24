@@ -47,6 +47,7 @@
    engine - an instance of Thymeleaf template engine.
    template - the path to the template.
    context-map - the map of values for the template to render.
+   writer - optionally, redirects the output to a java.io.Writer and returns nil at the end.
    "
   ([^TemplateEngine engine ^String template context-map]
    (render-file engine template context-map nil))

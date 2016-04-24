@@ -1,6 +1,6 @@
 # clj-thymeleaf
 
-A Clojure wrapper for Thymeleaf templating engine (http://www.thymeleaf.org/). 
+A Clojure wrapper for Thymeleaf templating engine (http://www.thymeleaf.org/).
 
 This project currently uses Thymeleaf version 3.0.0.BETA03.
 
@@ -32,12 +32,12 @@ Or in the `ns` declaration:
 
 
 ```Clojure
-(let [^TemplateEngine engine (template-engine
-                               :template-resolver-type :file ;; This can be either :file, :url or :classpath, defaults to :classpath.
-                               :prefix "./test/templates/"   ;; template file name prefix
-                               :suffix ".html"               ;; Template file name suffix
-                               :cacheable true               ;; whether to cache templates.
-                               )]
+(let [engine (template-engine
+               :template-resolver-type :file ;; This can be either :file, :url or :classpath, defaults to :classpath.
+               :prefix "./test/templates/"   ;; template file name prefix
+               :suffix ".html"               ;; Template file name suffix
+               :cacheable true               ;; whether to cache templates.
+               )]
   (render-file engine "test" {:title "Hello"}))
 ```
 
@@ -51,4 +51,4 @@ Copyright © 2016 rchancode
 Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
 
-THYMELEAF is a Copyright © of The THYMELEAF Team (http://www.thymeleaf.org/license.html)
+THYMELEAF is a Copyright © of The THYMELEAF Team (http://www.thymeleaf.org)
