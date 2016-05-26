@@ -2,8 +2,6 @@
 
 A Clojure wrapper for Thymeleaf templating engine (http://www.thymeleaf.org/).
 
-This project currently uses Thymeleaf version 3.0.0.BETA03.
-
 ## Installation
 
 With Leiningen, run:

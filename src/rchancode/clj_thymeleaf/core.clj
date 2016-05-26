@@ -5,7 +5,8 @@
            org.thymeleaf.templateresolver.FileTemplateResolver
            org.thymeleaf.templateresolver.UrlTemplateResolver
            org.thymeleaf.templateresolver.AbstractConfigurableTemplateResolver
-           org.thymeleaf.context.Context))
+           org.thymeleaf.context.Context
+           java.io.Writer))
 
 (defn- ^AbstractConfigurableTemplateResolver new-template-resolver [template-resolver-type]
   (case template-resolver-type
@@ -47,11 +48,11 @@
    engine - an instance of Thymeleaf template engine.
    template - the path to the template.
    context-map - the map of values for the template to render.
-   writer - optionally, redirects the output to a java.io.Writer and returns nil at the end.
+   writer - optionally, redirects the output to a java.io.Writer and returns nil.
    "
   ([^TemplateEngine engine ^String template context-map]
    (render-file engine template context-map nil))
-  ([^TemplateEngine engine ^String template context-map ^java.io.Writer writer]
+  ([^TemplateEngine engine ^String template context-map ^Writer writer]
    (if (string? template)
      (let [^Context ctx (Context.)]
        (if (map? context-map)
